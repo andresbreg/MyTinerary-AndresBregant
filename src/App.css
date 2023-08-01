@@ -1,0 +1,16 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  text-align: center;
+  min-height: 100vh;
+  width: 100%;
+  background-color: #EBEBEB;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.purple-button {
+  background-color: #5244e3;
+  color: white;
+}
