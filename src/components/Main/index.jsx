@@ -3,11 +3,11 @@ import './style.css'
 
 export default function index() {
   return (
-    <main className="d-flex mx-5">
+    <main className="d-flex mx-5 my-5">
       <div className="card-body w-50 ms-5 ps-5 text-start">
         <h2 className="card-title fw-bold">Find the perfect destination</h2>
         <p className="card-text my-4">Our app will help you find the perfect path for your next trip. With an easy-to-use interface and a host of itinerary options, planning your next trip has never been easier.</p>
-        <a href="#" className="btn purple-button px-5">View More</a>
+        <a href="#" id="call-to-action-button" className="btn px-5">View More</a>
       </div>
       <div className="w-50">
         <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" fill="currentColor" className="bi bi-image-alt" viewBox="0 0 16 16">

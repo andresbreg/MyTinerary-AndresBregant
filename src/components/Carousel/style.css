@@ -1,0 +1,42 @@
+.carouselContainer {
+  background-color: white;
+}
+
+.carousel-item {
+  padding: 0 12%;
+}
+
+img {
+  width: 48%;
+}
+
+.carousel-control-prev, .carousel-control-next {
+  width: 48px !important;
+  height: 48px;
+  background: #5244e3 !important;
+  padding: 8px !important;
+  border-radius: 50%;
+  top: 46% !important;
+  bottom: 50% !important;
+  opacity: 1 !important;
+}
+
+.carousel-control-prev {
+  left: 2% !important;
+}
+
+.carousel-control-prev-icon {
+  margin-right: 10%;
+}
+
+.carousel-control-next {
+  right: 2% !important;
+}
+
+.carousel-control-next-icon {
+  margin-left: 10%;
+}
+
+.carousel-indicators {
+  display: none !important;
+}
