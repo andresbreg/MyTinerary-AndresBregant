@@ -18,3 +18,8 @@ main {
   height: 80vh;
   background-color: #edecfc;
 }
+
+footer {
+  height: 8vh;
+  background-color: #5244e3;
+}

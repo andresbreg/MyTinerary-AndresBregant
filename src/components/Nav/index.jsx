@@ -1,6 +1,5 @@
 import React from 'react'
 import Anchor from '../Anchor'
-import Button from '../Login-Button'
 
 export default function index() {
   
@@ -21,7 +20,6 @@ export default function index() {
               {anchors.map((each,key) => <Anchor key={key} name={each.name} href={each.href}/>)}
             </li>
           </ul>
-          <Button/>
         </div>
       </div>
     </nav>
