@@ -1,0 +1,62 @@
+[
+  { 
+    "name": "Bangkok",
+    "country": "Thailand",
+    "photo": "../src/assets/Bangkok.jpg"
+  },
+  {
+    "name": "Cairo",
+    "country": "Egypt",
+    "photo": "../src/assets/Cairo.jpg"
+  },
+  {
+    "name": "Cape Town",
+    "country": "South Africa",
+    "photo": "../src/assets/Cape-Town.jpg"
+  },
+  {
+    "name": "Cusco",
+    "country": "Peru",
+    "photo": "../src/assets/Cusco.jpg"
+  },
+  {
+    "name": "Havana",
+    "country": "Cuba",
+    "photo": "../src/assets/Havana.jpg"
+  },
+  {
+    "name": "Istanbul",
+    "country": "Turkey",
+    "photo": "../src/assets/Istanbul.jpg"
+  },
+  {
+    "name": "Moscow",
+    "country": "Russia",
+    "photo": "../src/assets/Moscow.jpg"
+  },
+  {
+    "name": "Paris",
+    "country": "France",
+    "photo": "../src/assets/Paris.jpg"
+  },
+  {
+    "name": "Rio",
+    "country": "Brazil",
+    "photo": "../src/assets/Rio.jpg"
+  },
+  {
+    "name": "Rome",
+    "country": "Italy",
+    "photo": "../src/assets/Rome.jpg"
+  },
+  {
+    "name": "Shanghai",
+    "country": "China",
+    "photo": "../src/assets/Shanghai.jpg"
+  },
+  {
+    "name": "Sidney",
+    "country": "Australia",
+    "photo": "../src/assets/Sidney.jpg"
+  }
+]

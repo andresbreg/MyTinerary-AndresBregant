@@ -6,7 +6,8 @@ import './style.css'
 
 function index() {
   return (
-    <div className="carouselContainer py-5">
+    <section className="text-bg-light py-5">
+      <h2 className='fw-bold mb-5'>Popular MyTineraries</h2>
       <Carousel>
         <Carousel.Item interval={5000}>
           <Slide1/>
@@ -18,7 +19,7 @@ function index() {
           <Slide3/>
         </Carousel.Item>
       </Carousel>
-    </div>
+    </section>
   );
 }
 

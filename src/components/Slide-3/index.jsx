@@ -1,20 +1,21 @@
 import React from 'react'
-import RioDeJaneiro from '../../assets/Rio-de-Janeiro.jpg'
-import Roma from '../../assets/Roma.jpg'
-import Shanghai from '../../assets/Shanghai.jpg'
-import Sidney from '../../assets/Sidney.jpg'
+import Data from '../../data.json'
+import Card from '../../components/Card'
 
 export default function index() {
+
+  let cities = Data.slice(8,12);
+  
   return (
-    <div className="d-flex flex-wrap gap-4">
-      <div className="d-flex gap-4 justify-content-center">
-          <img src={RioDeJaneiro} alt="Río de Janeiro"/>
-          <img src={Roma} alt="Roma"/>
-        </div>
-        <div className="d-flex gap-4 justify-content-center">
-          <img src={Shanghai} alt="Shanghái"/>
-          <img src={Sidney} alt="Sidney"/>
-        </div>
-    </div>        
+    <section>
+      {cities.map( (city,key) => 
+        <Card
+          key = {key}
+          name = {city.name}
+          country = {city.country}
+          photo = {city.photo}
+        />
+      )}    
+    </section>
   )
 }
