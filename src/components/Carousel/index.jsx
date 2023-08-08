@@ -7,7 +7,7 @@ import './style.css'
 function index() {
   return (
     <section className="text-bg-light py-5">
-      <h2 className='fw-bold mb-5'>Popular MyTineraries</h2>
+      <h2 className='carousel-title fw-bold mb-5'>Popular MyTineraries</h2>
       <Carousel>
         <Carousel.Item interval={5000}>
           <Slide1/>

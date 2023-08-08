@@ -1,4 +1,13 @@
+.slogan {
+  color: #392f9e;
+}
+
 #call-to-action-button {
   background-color: #5244e3;
   color: white;
+}
+
+.welcome-image {
+  width: 80%;
+  border-radius: 40px;
 }
