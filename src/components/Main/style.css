@@ -2,12 +2,20 @@
   color: #392f9e;
 }
 
-#call-to-action-button {
+#call-to-action {
   background-color: #5244e3;
   color: white;
 }
 
 .welcome-image {
-  width: 80%;
+  width: 96%;
   border-radius: 40px;
+}
+
+/* Responsive Styles */
+
+@media (min-width: 992px) {
+  .card-body {
+    width: 100%;
+  }
 }

@@ -9,17 +9,19 @@
   justify-content: space-between;
 }
 
-header {
-  height: 20vh;
-  background-color: #edecfc;
-}
-
-main {
-  height: 80vh;
+header, main {
   background-color: #edecfc;
 }
 
 footer {
-  height: 8vh;
   background-color: #5244e3;
+}
+
+@media (min-width: 1200px) {
+  header {
+    min-height: 20vh;  
+  }
+  footer {
+    height: 10vh;  
+  }
 }

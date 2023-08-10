@@ -1,11 +1,13 @@
-import React from 'react'
 import { Link as FooterLink } from 'react-router-dom'
 import './style.css'
 
 export default function index() {
   return (
-    <footer className='d-flex justify-content-between align-items-center px-5'>
-      <FooterLink to="/" className='footer-link fw-medium'>MyTinerary</FooterLink>
+    <footer className='d-flex justify-content-between align-items-center py-2 py-md-3 py-lg-3 px-3'>
+      <div>
+        <FooterLink to="/" className='footer-link fw-medium me-3'>MyTinerary</FooterLink>
+        <FooterLink to="/cities" className='footer-link fw-medium'>Cities</FooterLink>
+      </div>
       <div className='d-flex align-items-center'>  
         <a className='footer-link' href="https://www.instagram.com/" target='blank'>
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" className="bi bi-instagram mx-2" viewBox="0 0 16 16" href='#'>
@@ -18,7 +20,6 @@ export default function index() {
           </svg>
         </a>
       </div>
-      <FooterLink to="/cities" className='footer-link fw-medium'>View Cities</FooterLink>
     </footer>
   )
 }

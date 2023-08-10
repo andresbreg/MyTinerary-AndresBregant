@@ -1,3 +1,21 @@
 .nav-link {
+  color: #5244e3 !important;
   text-decoration: none;
 }
+
+.nav-link:hover {
+  color: #392f9e !important;
+}
+
+/* .navbar-toggler {
+  color: #5244e3 !important;
+  border: none !important;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none !important;
+}
+
+.navbar-toggler-icon {
+  background-image: url(../../assets/menu-icon.png) !important;
+} */
