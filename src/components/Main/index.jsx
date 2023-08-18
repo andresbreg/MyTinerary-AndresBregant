@@ -1,5 +1,5 @@
-import Welcome from '../../assets/Welcome.jpg'
 import { Link as MainLink } from 'react-router-dom'
+import Welcome from '/Welcome.jpg'
 import './style.css'
 
 export default function index() {

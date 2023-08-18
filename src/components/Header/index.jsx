@@ -1,4 +1,4 @@
-import Logo from '../../assets/logo/mytinerary-logo.png'
+import Logo from '/mytinerary-logo.png'
 import Nav from '../Nav'
 import LoginButton from '../Login-Button'
 import { Link as HeaderLink } from 'react-router-dom'

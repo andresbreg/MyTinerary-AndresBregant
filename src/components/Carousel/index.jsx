@@ -12,12 +12,12 @@ function index() {
         <Carousel.Item interval={5000}>
           <Slide1/>
         </Carousel.Item>
-        <Carousel.Item interval={5000}>
+        {/* <Carousel.Item interval={5000}>
           <Slide2/>
         </Carousel.Item>
         <Carousel.Item interval={5000}>
           <Slide3/>
-        </Carousel.Item>
+        </Carousel.Item> */}
       </Carousel>
     </section>
   );
