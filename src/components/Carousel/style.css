@@ -38,9 +38,9 @@
 /* Responsive Styles */
 
 @media (max-width: 440px) {
-  img {
+  /* img {
     width: 72%;
-  }
+  } */
   .carousel-control-prev, .carousel-control-next {
     width: 32px !important;
     height: 32px;
@@ -48,9 +48,9 @@
 }
 
 @media (min-width: 441px) and (max-width: 576px) {
-  img {
+  /* img {
     width: 76%;
-  }
+  } */
   .carousel-control-prev, .carousel-control-next {
     width: 36px !important;
     height: 36px;
@@ -58,9 +58,9 @@
 }
 
 @media (min-width: 577px) {
-  img {
+  /* img {
     width: 48%;
-  }
+  } */
   .carousel-control-prev, .carousel-control-next {
     width: 36px !important;
     height: 36px;

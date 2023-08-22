@@ -2,8 +2,27 @@
   color: #392f9e;
 }
 
-#search-button {
+#search-button, #back-button {
   height: 40px;
   background-color: #5244e3;
   color: white;
+}
+
+.card-container {
+  max-width: 48%;
+  cursor: pointer;
+}
+
+.warning {
+  color: white;
+  background-color: rgb(242, 192, 10);
+  border-radius: 20px;
+}
+
+/* Responsive Styles */
+
+@media (min-width: 440px) {
+  .filter {
+    margin: 0 20px;
+  }
 }

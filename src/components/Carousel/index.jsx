@@ -1,22 +1,30 @@
 import Carousel from 'react-bootstrap/Carousel'
-import Slide1 from '../Slide-1'
-import Slide2 from '../Slide-2'
-import Slide3 from '../Slide-3'
+import Slide from '../Slide'
 import './style.css'
 
 function index() {
+
+  // function createSlide(array) {
+  //   for (let i=0; i<3; i++) {
+  //     cities.push(array.slice(i*4,(i+1)*4))
+  //   }
+  // }
+
   return (
-    <section className="text-bg-light pb-5 pt-sm-4 pt-xl-4 px-3 px-md-4">
+    <section className="pb-5 pt-sm-4 pt-xl-4 px-3 px-md-4">
       <h2 className='section-title my-4 fw-bold mb-sm-5'>Popular MyTineraries</h2>
       <Carousel>
         <Carousel.Item interval={5000}>
-          <Slide1/>
+          {
+          <Slide/>
+
+          }
         </Carousel.Item>
         {/* <Carousel.Item interval={5000}>
-          <Slide2/>
+          <Slide/>
         </Carousel.Item>
         <Carousel.Item interval={5000}>
-          <Slide3/>
+          <Slide/>
         </Carousel.Item> */}
       </Carousel>
     </section>
