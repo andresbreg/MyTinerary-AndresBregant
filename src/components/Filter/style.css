@@ -9,7 +9,7 @@
 }
 
 .card-container {
-  max-width: 48%;
+  display: contents;
   cursor: pointer;
 }
 

@@ -14,7 +14,7 @@ export default function index() {
         </div>
       </div>
       <div className='me-lg-4'>
-        <img src={Welcome} className='welcome-image'/>
+        <img src={Welcome} className='welcome-image my-5 my-lg-1'/>
       </div>
     </main>
   )

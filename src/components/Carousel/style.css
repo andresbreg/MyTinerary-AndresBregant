@@ -37,30 +37,36 @@
 
 /* Responsive Styles */
 
-@media (max-width: 440px) {
-  /* img {
-    width: 72%;
-  } */
+@media (max-width: 400px) {
+  .carousel-control-prev {
+    left: -2% !important;
+  }  
+  .carousel-control-next {
+    right: -2% !important;
+  }
+}
+
+  @media (max-width: 440px) {
+  .carousel-control-prev {
+    left: 0 !important;
+  }  
+  .carousel-control-next {
+    right: 0 !important;
+  }
+  .carousel-control-prev, .carousel-control-next {
+    width: 28px !important;
+    height: 28px;
+  }   
+}
+
+@media (min-width: 441px) and (max-width: 576px) {
   .carousel-control-prev, .carousel-control-next {
     width: 32px !important;
     height: 32px;
   }   
 }
 
-@media (min-width: 441px) and (max-width: 576px) {
-  /* img {
-    width: 76%;
-  } */
-  .carousel-control-prev, .carousel-control-next {
-    width: 36px !important;
-    height: 36px;
-  }   
-}
-
 @media (min-width: 577px) {
-  /* img {
-    width: 48%;
-  } */
   .carousel-control-prev, .carousel-control-next {
     width: 36px !important;
     height: 36px;
