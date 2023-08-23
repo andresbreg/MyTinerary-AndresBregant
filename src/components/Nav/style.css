@@ -1,21 +1,18 @@
-.nav-link {
+header .nav-link {
   color: #5244e3 !important;
   text-decoration: none;
 }
 
-.nav-link:hover {
+header .nav-link:hover {
   color: #392f9e !important;
 }
 
-/* .navbar-toggler {
-  color: #5244e3 !important;
-  border: none !important;
+footer .nav-link {
+  color: white !important;
+  text-decoration: none;
+  font-weight: 500 !important;
 }
 
-.navbar-toggler:focus {
-  box-shadow: none !important;
+footer .nav-link:hover {
+  color: antiquewhite !important;
 }
-
-.navbar-toggler-icon {
-  background-image: url(../../assets/menu-icon.png) !important;
-} */
