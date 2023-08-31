@@ -14,7 +14,12 @@
   .city {
     margin: 0;
   }
+  .city-text {
+    height: 320px;
+    background-color: #f6f5fd;
+  }
   .city-image {
+    height: 320px;
     width: 50%;
   }
 }

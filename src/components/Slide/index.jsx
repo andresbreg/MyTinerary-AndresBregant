@@ -7,7 +7,7 @@ export default function index({since,to}) {
   const [cities, setCities] = useState([])
   
   const getCities = () => {   
-    axios('http://localhost:3000/api/cities')
+    axios.get('http://localhost:3000/api/cities')
     .then(response => setCities(response.data))
     .catch(error => console.log(error))
   }  

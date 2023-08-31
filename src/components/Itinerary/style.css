@@ -1,0 +1,13 @@
+.itinerary {
+  background-color: #f6f5fd;
+  color: #392f9e;
+  width: 42vw;
+}
+
+.itinerary-cover {
+  width: 42vw;
+}
+
+.view-more-button {
+  background: none;
+}
