@@ -1,10 +1,22 @@
+import { useState } from 'react'
+import Dropdown from '../../components/Dropdown'
 import './style.css'
 
 export default function index({name,photo,author,duration,price,likes,hashtags}) {
 
+  const [dropdownState, setDropdownState] = useState(false)
+
+  const viewMore = () => {
+    setDropdownState(true)
+  }
+  
+  const closeDropdown = () => {
+    setDropdownState(false)
+  }  
+
   return (
     <>    
-      <div className='d-flex my-4'>      
+      <div className='d-flex mt-4'>      
         <img src={photo} alt={'Cover of ' + name} className='itinerary-cover'/>
         <div className='itinerary d-flex flex-column justify-content-evenly'>
           <h4>{name}</h4>
@@ -43,7 +55,7 @@ export default function index({name,photo,author,duration,price,likes,hashtags})
           <p className='text-center'>{hashtags.join(' ')}</p>          
           <div className='d-flex flex-column align-items-center'>
             <p className='my-0 fw-semibold'>View more</p>
-            <button className='view-more-button border-0'>
+            <button onClick={viewMore} className='view-more-button border-0'>
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-chevron-down" viewBox="0 0 16 16">
                 <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/>
               </svg>
@@ -51,6 +63,17 @@ export default function index({name,photo,author,duration,price,likes,hashtags})
           </div>
         </div>
       </div>
+      {dropdownState == false ?
+        <span></span> :
+        <div>
+          <button onClick={closeDropdown} className='close-dropdown-button border-0'>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-up" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"/>
+            </svg>
+          </button>
+          <Dropdown/>
+        </div>
+      }
     </>
   )
 }

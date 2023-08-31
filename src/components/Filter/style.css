@@ -13,12 +13,6 @@
   cursor: pointer;
 }
 
-.warning {
-  color: white;
-  background-color: rgb(242, 192, 10);
-  border-radius: 20px;
-}
-
 /* Responsive Styles */
 
 @media (min-width: 440px) {

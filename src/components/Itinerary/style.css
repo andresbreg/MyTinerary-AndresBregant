@@ -8,6 +8,6 @@
   width: 42vw;
 }
 
-.view-more-button {
+.view-more-button, .close-dropdown-button {
   background: none;
 }
