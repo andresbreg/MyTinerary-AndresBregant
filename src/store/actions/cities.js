@@ -8,6 +8,6 @@ const get_city_itineraries = createAction ('get_city_itineraries', array => {
   return {payload:array}
 })
 
-const filterActions = { get_cities, get_city_itineraries }
+const citiesActions = { get_cities, get_city_itineraries }
 
-export default filterActions
+export default citiesActions
