@@ -1,32 +1,34 @@
 import { useState, useEffect } from 'react'
+import { useSelector, useDispatch } from "react-redux"
+import citiesActions from '../../store/actions/cities'
+import axios from 'axios'
 import Card from '../../components/Card'
 import City from '../../components/City'
 import Itinerary from '../../components/Itinerary'
-import axios from 'axios'
 import './style.css'
 
 export default function index() {
 
-  const [search, setSearch] = useState('');
-  const [searchResults, setSearchResults] = useState([])
+  let cities = useSelector(store => store.citiesReducer.cities)
+  let cityItineraries = useSelector(store => store.citiesReducer.city_itineraries)
+  
+  const [search, setSearch] = useState('')
   const [selectedCity, setSelectedCity] = useState({})
   const [cityState, setCityState] = useState(false)
-  const [cityItineraries, setCityItineraries] = useState([])
+  
+  const dispatch = useDispatch()
   
   const handleSearch = () => {    
     axios.get('http://localhost:3000/api/filter', {params: {startsWith: search}})
-      .then (response => setSearchResults(response.data))
+      .then (response => dispatch(citiesActions.get_cities(response.data)))
       .catch(error => console.log(error))
   }
 
   const getCityItineraries = (cityId) => {
     axios.get(`http://localhost:3000/api/city/itineraries/${cityId}`)
-      .then (response => {
-        setCityItineraries(response.data)
-        console.log(response.data)
-      })      
-      .catch(error => console.log(error))    
-  }  
+      .then (response => dispatch(citiesActions.get_city_itineraries(response.data)))      
+      .catch(error => console.log(error))
+  }
 
   const viewCity = city => {
     setSelectedCity(city)
@@ -56,8 +58,8 @@ export default function index() {
             </button>
           </div>
           <div className='d-flex flex-wrap justify-content-center gap-2'>
-            {searchResults.length > 0 ?        
-            searchResults.map( (city,key) => 
+            {cities.length > 0 ?        
+            cities.map( (city,key) => 
               <div onClick={() => viewCity(city)} key={key} className='card-container'>
                 <Card name={city.name} country={city.country} photo={city.photo}/>
               </div>
