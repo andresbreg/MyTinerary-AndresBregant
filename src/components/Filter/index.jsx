@@ -17,7 +17,7 @@ export default function index() {
   const [cityState, setCityState] = useState(false)
   
   const dispatch = useDispatch()
-  
+
   const handleSearch = () => {    
     axios.get('http://localhost:3000/api/filter', {params: {startsWith: search}})
       .then (response => dispatch(citiesActions.get_cities(response.data)))
@@ -58,22 +58,24 @@ export default function index() {
             </button>
           </div>
           <div className='d-flex flex-wrap justify-content-center gap-2'>
-            {cities.length > 0 ?        
+            {cities.length > 0 ?
             cities.map( (city,key) => 
               <div onClick={() => viewCity(city)} key={key} className='card-container'>
                 <Card name={city.name} country={city.country} photo={city.photo}/>
               </div>
             ) :
-            <h3 className='section-title mt-5'>We're sorry. No results for your search.</h3>}
+            <h3 className='section-title mt-5'>We sorry. There are no itineraries for this city yet.</h3>}
           </div>      
         </section> :
         <section className='d-flex flex-column align-items-center'>
           <City name={selectedCity.name} country={selectedCity.country} photo={selectedCity.photo} summary={selectedCity.summary}/>
           <div>
             <h2 className='section-title mb-5'>Itineraries</h2>    
-            {cityItineraries.map( (itinerary,key) => 
+            {cityItineraries.length > 0 ?
+            cityItineraries.map( (itinerary,key) => 
               <Itinerary key={key} name={itinerary.name} photo={itinerary.photo} author={itinerary.author} duration={itinerary.duration} price={itinerary.price} likes={itinerary.likes} hashtags={itinerary.hashtags}/>     
-            )}
+            ) :
+            <h3 className='section-title mt-5'>There are no itineraries for this city yet.</h3>}
           </div>    
           <button onClick={backToCities} id='back-button' className='btn d-flex align-items-center fs-6 fw-bold my-5'>
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" className="bi bi-arrow-left-circle me-2" viewBox="0 0 16 16">
