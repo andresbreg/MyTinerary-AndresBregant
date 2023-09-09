@@ -1,10 +1,10 @@
-import Logo from '/mytinerary-logo.png'
+import { Link as HeaderLink } from 'react-router-dom'
 import Nav from '../Nav'
 import LoginButton from '../Login-Button'
-import { Link as HeaderLink } from 'react-router-dom'
+import Logo from '/mytinerary-logo.png'
 import './style.css'
 
-export default function index() {
+const Header = () => {
   return (
     <header className="d-flex justify-content-between align-items-center py-3 py-lg-4 px-lg-5">
       <HeaderLink to="/">
@@ -17,3 +17,5 @@ export default function index() {
     </header>
   )
 }
+
+export default Header

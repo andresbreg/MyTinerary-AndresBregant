@@ -2,7 +2,7 @@ import { Link as MainLink } from 'react-router-dom'
 import Welcome from '/Welcome.jpg'
 import './style.css'
 
-export default function index() {
+const Main = () => {
   return (
     <main className="d-flex flex-column flex-lg-row align-items-center py-3 px-4 py-lg-5">
       <div className="card-body mx-lg-4 ps-xl-3 text-center text-lg-start">
@@ -19,3 +19,5 @@ export default function index() {
     </main>
   )
 }
+
+export default Main

@@ -1,8 +1,7 @@
-import React from 'react'
 import Main from '../../components/Main'
 import Carousel from '../../components/Carousel'
 
-export default function index() {
+const Home = () => {
   return (
     <>
       <Main/>
@@ -10,3 +9,5 @@ export default function index() {
     </>
   )
 }
+
+export default Home

@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import Card from '../../components/Card'
 import axios from 'axios'
 
-export default function index({since,to}) {
+const Slide = ({since,to}) => {
 
   const [cities, setCities] = useState([])
   
@@ -22,3 +22,5 @@ export default function index({since,to}) {
     </section>
   )
 }
+
+export default Slide

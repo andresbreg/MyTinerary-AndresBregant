@@ -1,7 +1,7 @@
 import Nav from '../Nav'
 import './style.css'
 
-export default function index() {
+const Footer = () => {
   return (
     <footer className='d-flex justify-content-between align-items-center py-2 py-md-3 py-lg-3 px-3'>      
       <Nav/>      
@@ -20,3 +20,5 @@ export default function index() {
     </footer>
   )
 }
+
+export default Footer

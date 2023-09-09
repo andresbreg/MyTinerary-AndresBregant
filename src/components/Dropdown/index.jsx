@@ -1,6 +1,6 @@
 import './style.css'
 
-export default function index() {
+const Dropdown = () => {
 
   return (
     <div className='d-flex justify-content-center'>
@@ -14,3 +14,5 @@ export default function index() {
     </div>
   )
 }
+
+export default Dropdown

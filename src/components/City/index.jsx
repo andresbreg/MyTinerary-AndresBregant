@@ -1,7 +1,6 @@
-import React from 'react'
 import './style.css'
 
-export default function index({name,country,photo,summary}) {
+const City = ({name,country,photo,summary}) => {
 
   return (
     <article className='mt-5 mb-4 mx-5'>
@@ -16,3 +15,5 @@ export default function index({name,country,photo,summary}) {
     </article>
   )
 }
+
+export default City

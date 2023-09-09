@@ -1,7 +1,7 @@
 import { Link as NavLink } from 'react-router-dom'
 import './style.css'
 
-export default function index() {
+const Nav = () => {
   
   let anchors = [
     { name:'Home', href:'/' },
@@ -24,3 +24,5 @@ export default function index() {
     </nav>
   )
 }
+
+export default Nav

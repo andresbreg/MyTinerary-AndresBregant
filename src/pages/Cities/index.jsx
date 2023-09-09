@@ -1,6 +1,6 @@
 import Filter from '../../components/Filter'
 
-export default function index() {  
+const Cities = () => {  
 
   return (
     <>      
@@ -8,3 +8,5 @@ export default function index() {
     </>          
   )
 }
+
+export default Cities

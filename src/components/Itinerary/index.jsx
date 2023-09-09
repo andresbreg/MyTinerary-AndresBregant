@@ -2,7 +2,7 @@ import { useState } from 'react'
 import Dropdown from '../../components/Dropdown'
 import './style.css'
 
-export default function index({name,photo,author,duration,price,likes,hashtags}) {
+const Itinerary = ({name,photo,author,duration,price,likes,hashtags}) => {
 
   const [dropdownState, setDropdownState] = useState(false)
 
@@ -67,3 +67,5 @@ export default function index({name,photo,author,duration,price,likes,hashtags})
     </>
   )
 }
+
+export default Itinerary

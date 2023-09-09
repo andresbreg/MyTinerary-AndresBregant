@@ -7,7 +7,7 @@ import City from '../../components/City'
 import Itinerary from '../../components/Itinerary'
 import './style.css'
 
-export default function index() {
+const Filter = () => {
 
   let cities = useSelector(store => store.citiesReducer.cities)
   let cityItineraries = useSelector(store => store.citiesReducer.city_itineraries)
@@ -88,3 +88,5 @@ export default function index() {
     </>    
   )
 }
+
+export default Filter

@@ -1,8 +1,9 @@
-import './App.css'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import Layout from './layouts/Layout'
 import Home from './pages/Home'
 import Cities from './pages/Cities'
+import SignIn from './pages/Sign-In'
+import './App.css'
 
 function App() {
 
@@ -10,7 +11,8 @@ function App() {
     { path: '/', element: <Layout/>,
       children: [
         { path: '/', element: <Home/> },
-        { path: '/cities', element: <Cities/> }
+        { path: '/cities', element: <Cities/> },
+        { path: '/sign-in', element: <SignIn/> }
       ]
     }
   ])
