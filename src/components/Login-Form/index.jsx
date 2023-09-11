@@ -1,23 +1,25 @@
 import { useRef } from 'react'
-import axios from 'axios'
+import { useDispatch } from "react-redux"
+import userActions from '../../store/actions/user'
 import './style.css'
 
 const LoginForm = () => {
+
+  const dispatch = useDispatch()
   
   const emailInput = useRef()
   const passwordInput = useRef()
 
-  const handlerLogin = (e) => {
-    e.preventDefault()
-    axios.post('http://localhost:3000/api/user/login', {
-      email: emailInput.current.value,
-      password: passwordInput.current.value
-    })
-    .then(response => {
-      console.log(response.data.token)
-      localStorage.setItem('token', response.data.token)
-  })
-    .catch(error => console.log(error.response.data.message))
+  const handlerLogin = (event) => {
+    event.preventDefault()
+    const email = emailInput.current.value
+    const password = passwordInput.current.value
+    try {
+      dispatch(userActions.sign_in({email,password}))
+    }
+    catch (error) {
+      console.log(error)
+    }
   }
 
   return (

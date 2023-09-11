@@ -1,4 +1,7 @@
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
+import { useEffect } from 'react'
+import { useDispatch } from 'react-redux'
+import userActions from './store/actions/user'
 import Layout from './layouts/Layout'
 import Home from './pages/Home'
 import Cities from './pages/Cities'
@@ -16,6 +19,12 @@ function App() {
       ]
     }
   ])
+
+  const dispatch = useDispatch()
+  
+  useEffect(() => {
+    dispatch(userActions.authenticate())
+  }, [])
 
   return (
     <>
