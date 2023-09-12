@@ -42,6 +42,17 @@ const authenticate = createAsyncThunk('authenticate', async () => {
   }
 })
 
-const userActions = {sign_in, authenticate}
+const sign_out = createAsyncThunk('sign_out', async () => {
+  try {
+    await axios
+    .post('http://localhost:3000/api/user/logout')
+    .then(localStorage.removeItem('token'))
+  }
+  catch (error) {
+    console.log(error.message)
+  }
+})
+
+const userActions = {sign_in, authenticate, sign_out}
 
 export default userActions

@@ -1,0 +1,17 @@
+#logout-button {
+  height: 40px;
+  border-color: #5244e3;
+  color: #5244e3;
+}
+
+.login-span {
+  display: none;
+}
+
+/* Responsive Styles */
+
+@media (min-width: 440px) {
+  span {
+    display: inline;
+  }
+}
