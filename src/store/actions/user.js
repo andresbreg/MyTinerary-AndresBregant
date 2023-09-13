@@ -1,6 +1,30 @@
 import { createAsyncThunk } from "@reduxjs/toolkit"
 import axios from 'axios'
 
+const register = createAsyncThunk('register', async payload => {
+  try {
+    let {name, lastName, email, password, picture, country} = payload
+    const user = await axios    
+      .post('http://localhost:3000/api/user/register', {
+        name: name,
+        last_name: lastName,
+        email: email,
+        password: password,
+        picture: picture,
+        country: country
+      })
+      .then(response => {
+        console.log('User successfully register')
+        return response.data.user
+      })
+      .catch(error => console.log(error.response.data.messages))
+    return {user: user}
+  }
+  catch (error) {
+    console.log(error.message)
+  }
+})
+
 const sign_in = createAsyncThunk('sign_in', async payload => {
   try {
     let {email,password} = payload
@@ -53,6 +77,6 @@ const sign_out = createAsyncThunk('sign_out', async () => {
   }
 })
 
-const userActions = {sign_in, authenticate, sign_out}
+const userActions = {register, sign_in, authenticate, sign_out}
 
 export default userActions

@@ -1,107 +1,15 @@
 [
-  { 
-    "name": "Bangkok",
-    "country": "Thailand",
-    "continent": "Asia",
-    "photo": "../src/assets/cities/Bangkok.jpg",
-    "summary": "Bangkok, the capital of Thailand, captivates visitors with its vibrant blend of traditional culture and dazzling modernity. Its majestic temples, bustling street markets, and exquisite cuisine offer a unique experience in a dynamic and exciting urban setting."
-  },
-  {
-    "name": "Cairo",
-    "country": "Egypt",
-    "continent": "Africa",
-    "photo": "../src/assets/cities/Cairo.jpg",
-    "summary": "Cairo, Egypt's vibrant hub, allures with iconic pyramids and a treasure trove of history. From the lively markets of Khan El Khalili to the splendid Egyptian Museum, it's a captivating fusion of ancient marvels and dynamic urban energy."
-  },
-  {
-    "name": "Cape Town",
-    "country": "South Africa",
-    "continent": "Africa",
-    "photo": "../src/assets/cities/Cape-Town.jpg",
-    "summary": "Cape Town, in South Africa, enchants tourists with its stunning natural beauty and cultural diversity. From the iconic Table Mountain to its golden beaches and lively art scene, the city offers an unforgettable journey where nature and culture intertwine in an amazing way."
-  },
-  {
-    "name": "Cusco",
-    "country": "Peru",
-    "continent": "America",
-    "photo": "../src/assets/cities/Cusco.jpg",
-    "summary": "Cusco, the heart of Peru's Andes, captivates with its ancient Incan heritage. The city's cobblestone streets, stunning architecture, and proximity to Machu Picchu make it a mesmerizing blend of history and natural beauty."
-  },
-  {
-    "name": "Havana",
-    "country": "Cuba",
-    "continent": "America",
-    "photo": "../src/assets/cities/Havana.jpg",
-    "summary": "Havana, Cuba's lively capital, exudes a timeless charm through its colorful architecture and street scenes. From the historic Malecón to the rhythmic sounds of salsa, the city offers an enchanting fusion of culture and energy."
-  },
-  {
-    "name": "Istanbul",
-    "country": "Turkey",
-    "continent": "Europe",
-    "photo": "../src/assets/cities/Istanbul.jpg",
-    "summary": "Istanbul, where East meets West, boasts a captivating blend of ancient history and modern vibrancy. From the iconic Hagia Sophia to the bustling Grand Bazaar, the city offers an enchanting tapestry of cultures and experiences."
-  },
-  {
-    "name": "London",
-    "country": "England",
-    "continent": "Europe",
-    "photo": "../src/assets/cities/London.jpg",
-    "summary": "London, a global metropolis, showcases a fascinating fusion of historical grandeur and contemporary vitality. From the iconic Tower of London to the bustling markets of Camden, the city offers an unparalleled mix of culture and excitement."
-  },
-  {
-    "name": "Moscow",
-    "country": "Russia",
-    "continent": "Europe",
-    "photo": "../src/assets/cities/Moscow.jpg",
-    "summary": "Moscow, Russia's capital, presents an intriguing juxtaposition of rich history and modern verve. From the iconic Red Square to the bustling Arbat Street, the city offers an enthralling fusion of tradition and energy."
-  },
-  {
-    "name": "New Delhi",
-    "country": "India",
-    "continent": "Asia",
-    "photo": "../src/assets/cities/New-Delhi.jpg",
-    "summary": "New Delhi, where history dances with the present, welcomes you with open arms. From the regal embrace of the Lotus Temple to the kaleidoscope of flavors at Dilli Haat, the city weaves a spellbinding narrative of tradition and innovation."
-  },
-  {
-    "name": "New York",
-    "country": "United States",
-    "continent": "America",
-    "photo": "../src/assets/cities/New-York.jpg",
-    "summary": "New York, the city that never sleeps, paints a mesmerizing canvas of urban diversity and ceaseless motion. From the soaring heights of the Empire State Building to the electric energy of Times Square, the city offers an exhilarating fusion of culture and constant evolution."
-  },
-  {
-    "name": "Paris",
-    "country": "France",
-    "continent": "Europe",
-    "photo": "../src/assets/cities/Paris.jpg",
-    "summary": "Paris, the City of Light, radiates an enchanting blend of timeless romance and artistic allure. From the iconic Eiffel Tower's grace to the charming Montmartre streets, the city weaves a captivating tapestry of elegance and creativity."
-  },
-  {
-    "name": "Rio",
-    "country": "Brazil",
-    "continent": "America",
-    "photo": "../src/assets/cities/Rio.jpg",
-    "summary": "Rio de Janeiro, where samba rhythms meet stunning landscapes, captivates with its vibrant culture and natural beauty. From the iconic Christ the Redeemer statue atop Corcovado to the lively beaches of Copacabana, the city offers a breathtaking fusion of rhythm and scenery."
-  },
-  {
-    "name": "Rome",
-    "country": "Italy",
-    "continent": "Europe",
-    "photo": "../src/assets/cities/Rome.jpg",
-    "summary": "Rome, the Eternal City, echoes with the whispers of history and the vivacity of modern life. From the majestic Colosseum's shadow to the bustling lanes of Trastevere, the city presents an enthralling blend of ancient tales and contemporary flair."
-  },
-  {
-    "name": "Shanghai",
-    "country": "China",
-    "continent": "Asia",
-    "photo": "../src/assets/cities/Shanghai.jpg",
-    "summary": "Shanghai, a mesmerizing fusion of yesteryears and tomorrows, invites you to wander through its time-worn alleys and embrace the glittering embrace of its high-tech horizons. From the hidden charms of Tianzifang to the sci-fi aura of the Oriental Pearl Tower, the city whispers tales of contrasts and evolution at every turn."
-  },
-  {
-    "name": "Sidney",
-    "country": "Australia",
-    "continent": "Oceania",
-    "photo": "../src/assets/cities/Sidney.jpg",
-    "summary": "Sydney, where land and sea embrace, captivates with its iconic landmarks and coastal elegance. From the majestic sails of the Opera House to the sun-kissed shores of Bondi Beach, the city weaves a breathtaking narrative of architectural marvels and natural beauty."
-  }
+  "Argentina",
+  "Belgium",
+  "Brazil",
+  "Canada",
+  "Colombia",
+  "France",
+  "Germany",
+  "Italy",
+  "Mexico",
+  "Spain",
+  "United Kingdom",
+  "United States",
+  "Other"
 ]

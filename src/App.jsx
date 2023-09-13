@@ -6,6 +6,7 @@ import Layout from './layouts/Layout'
 import Home from './pages/Home'
 import Cities from './pages/Cities'
 import SignIn from './pages/Sign-In'
+import SignUp from './pages/Sign-Up'
 import './App.css'
 
 function App() {
@@ -15,7 +16,8 @@ function App() {
       children: [
         { path: '/', element: <Home/> },
         { path: '/cities', element: <Cities/> },
-        { path: '/sign-in', element: <SignIn/> }
+        { path: '/sign-in', element: <SignIn/> },
+        { path: '/sign-up', element: <SignUp/> }
       ]
     }
   ])

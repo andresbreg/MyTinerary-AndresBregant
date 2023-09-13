@@ -1,5 +1,4 @@
-.login-form {
-  width: 50vw;
+.register-form {
   margin: auto;
   background-color: #f6f5fd;
   color: #392f9e;
@@ -10,7 +9,17 @@
 }
 
 input {
+  width: 240px;
   border-color: #392f9e;
+}
+
+select {
+  width: 240px;
+  color: #392f9e;
+}
+
+option {
+  color: #392f9e;
 }
 
 #text-link {
@@ -19,7 +28,7 @@ input {
   cursor: pointer;
 }
 
-#login-button {
+#register-button {
   background-color: #5244e3;
   color: white;
 }
