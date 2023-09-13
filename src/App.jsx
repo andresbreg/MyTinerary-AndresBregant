@@ -1,6 +1,7 @@
-import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import { useEffect } from 'react'
 import { useDispatch } from 'react-redux'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import ProtectedRoute from './utils/ProtectedRoute'
 import userActions from './store/actions/user'
 import Layout from './layouts/Layout'
 import Home from './pages/Home'
@@ -11,17 +12,6 @@ import './App.css'
 
 function App() {
 
-  const router = createBrowserRouter ([
-    { path: '/', element: <Layout/>,
-      children: [
-        { path: '/', element: <Home/> },
-        { path: '/cities', element: <Cities/> },
-        { path: '/sign-in', element: <SignIn/> },
-        { path: '/sign-up', element: <SignUp/> }
-      ]
-    }
-  ])
-
   const dispatch = useDispatch()
   
   useEffect(() => {
@@ -30,7 +20,18 @@ function App() {
 
   return (
     <>
-      <RouterProvider router={router}/>    
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<Layout/>}>
+            <Route path='/' element={<Home/>}/>
+            <Route path='/cities' element={<Cities/>}/>
+            <Route element={<ProtectedRoute/>}>
+              <Route path='/sign-in' element={<SignIn/>}/>            
+              <Route path='/sign-up' element={<SignUp/>}/>
+            </Route>
+          </Route>
+        </Routes>
+      </BrowserRouter>
     </>
   )
 }

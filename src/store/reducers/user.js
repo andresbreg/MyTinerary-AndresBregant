@@ -15,7 +15,7 @@ const userReducer = createReducer(initialState, builder => {
       return {user: action.payload.user, login: true}
     })
     .addCase(userActions.authenticate.fulfilled, (state,action) => {
-      return {user: action.payload.user}
+      return {user: action.payload.user, login: true}
     })
     .addCase(userActions.sign_out.fulfilled, (state,action) => {
       return initialState
