@@ -20,6 +20,12 @@ input {
 }
 
 #login-button {
+  width: 100px;
   background-color: #5244e3;
   color: white;
+}
+
+#google-login-button {
+  width: 200px;
+  margin: 0 auto;
 }

@@ -2,6 +2,8 @@ import { Link as TextLink } from 'react-router-dom'
 import { useRef } from 'react'
 import { useDispatch } from "react-redux"
 import { useNavigate } from 'react-router-dom'
+import { GoogleLogin } from '@react-oauth/google'
+import decode from "jwt-decode"
 import userActions from '../../store/actions/user'
 import './style.css'
 
@@ -17,6 +19,19 @@ const LoginForm = () => {
     event.preventDefault()
     const email = emailInput.current.value
     const password = passwordInput.current.value
+    try {
+      dispatch(userActions.sign_in({email,password}))
+      navigate('/')
+    }
+    catch (error) {
+      console.log(error)
+    }
+  }
+
+  const signInWithGoogle = (credentialResponse) => {
+    const dataUser = decode(credentialResponse.credential)
+    const email = dataUser.email
+    const password = dataUser.sub
     try {
       dispatch(userActions.sign_in({email,password}))
       navigate('/')
@@ -45,8 +60,13 @@ const LoginForm = () => {
             Create one.
           </TextLink>
         </p>
-        <div>
-          <button type="submit" id='login-button' className='fw-semibold btn mt-3 px-4'>Login</button>
+        <button type="submit" id='login-button' className='fw-semibold btn mt-3 px-4'>Login</button>
+        <p className='mt-3'>or</p>
+        <div id='google-login-button'>
+          <GoogleLogin
+            onSuccess={signInWithGoogle}
+            onError={() => console.log('Login Failed')}  
+          />
         </div>
       </form>
     </>

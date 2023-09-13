@@ -32,3 +32,8 @@ option {
   background-color: #5244e3;
   color: white;
 }
+
+#google-register-button {
+  width: 200px;
+  margin: 0 auto;
+}

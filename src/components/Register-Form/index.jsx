@@ -2,6 +2,8 @@ import { Link as TextLink } from 'react-router-dom'
 import { useRef } from 'react'
 import { useDispatch } from "react-redux"
 import { useNavigate } from 'react-router-dom'
+import { GoogleLogin } from '@react-oauth/google'
+import decode from "jwt-decode"
 import userActions from '../../store/actions/user'
 import data from '../../data.json'
 import './style.css'
@@ -26,6 +28,23 @@ const RegisterForm = () => {
     const password = passwordInput.current.value
     const picture = pictureInput.current.value
     const country = countrySelect.current.value
+    try {
+      dispatch(userActions.register({name,lastName,email,password,picture,country}))
+      navigate('/')
+    }
+    catch (error) {
+      console.log(error)
+    }
+  }
+
+  const registerWithGoogle = (credentialResponse) => {
+    const dataUser = decode(credentialResponse.credential)
+    const name = dataUser.given_name
+    const lastName = dataUser.family_name
+    const email = dataUser.email
+    const password = dataUser.sub
+    const picture = dataUser.picture
+    const country = 'Other'
     try {
       dispatch(userActions.register({name,lastName,email,password,picture,country}))
       navigate('/')
@@ -73,7 +92,7 @@ const RegisterForm = () => {
             <label htmlFor="country" className='fw-semibold mb-2'>Country</label>
             <br/>
             <select ref={countrySelect} type="select" id="country" name="country" className='border border-primary rounded-4 focus-ring mb-3 py-1 px-3'>
-              <option value="">Select your country</option>
+              <option value=''>Select your country</option>
               {data.map((country,key) => (
               <option key={key} value={country}>{country}</option>
               ))}
@@ -85,8 +104,13 @@ const RegisterForm = () => {
             Sign in.
           </TextLink>
         </p>
-        <div>
-          <button type="submit" id='register-button' className='fw-semibold btn mt-3 px-4'>Register</button>
+        <button type="submit" id='register-button' className='fw-semibold btn mt-3 px-4'>Register</button>
+        <p className='mt-3'>or</p>
+        <div id='google-register-button'>
+          <GoogleLogin
+            onSuccess={registerWithGoogle}
+            onError={() => console.log('Login Failed')}  
+          />
         </div>
       </form>
     </>
