@@ -1,7 +1,6 @@
 import { Link as TextLink } from 'react-router-dom'
 import { useRef } from 'react'
 import { useDispatch } from "react-redux"
-import { useNavigate } from 'react-router-dom'
 import { GoogleLogin } from '@react-oauth/google'
 import decode from "jwt-decode"
 import userActions from '../../store/actions/user'
@@ -10,7 +9,6 @@ import './style.css'
 const LoginForm = () => {
 
   const dispatch = useDispatch()
-  const navigate = useNavigate()
   
   const emailInput = useRef()
   const passwordInput = useRef()
@@ -21,7 +19,6 @@ const LoginForm = () => {
     const password = passwordInput.current.value
     try {
       dispatch(userActions.sign_in({email,password}))
-      navigate('/')
     }
     catch (error) {
       console.log(error)

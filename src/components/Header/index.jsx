@@ -7,7 +7,9 @@ import LogoutButton from '../Logout-Button'
 import './style.css'
 
 const Header = () => {
+
   const login = useSelector(state => state.userReducer.login)
+  
   return (
     <header className="d-flex justify-content-between align-items-center py-3 py-lg-4 px-lg-5">
       <HeaderLink to="/">
