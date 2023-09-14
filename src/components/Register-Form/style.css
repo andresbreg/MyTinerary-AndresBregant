@@ -37,3 +37,14 @@ option {
   width: 200px;
   margin: 0 auto;
 }
+
+/* Responsive Styles */
+
+@media (max-width: 400px) {
+  .register-form {
+    max-width: 84vw
+  }
+  input, select {
+    max-width: 100%;
+  }
+}

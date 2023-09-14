@@ -54,7 +54,7 @@ const RegisterForm = () => {
     <>
       <form onSubmit={handlerSubmit} className='register-form rounded-4 my-4 p-4'>
         <h3 className='form-title mb-4'>Sign Up</h3>
-        <div className='d-flex gap-4'>
+        <div className='d-flex-lg gap-4'>
           <div>
             <label htmlFor="name" className='fw-semibold mb-2'>Name</label>
             <br/>
@@ -66,7 +66,7 @@ const RegisterForm = () => {
             <input ref={lastNameInput} type="text" id="last-name" name="last-name" className='border border-primary rounded-4 focus-ring mb-3 py-1 px-3'/>
           </div>
         </div>
-        <div className='d-flex gap-4'>
+        <div className='d-flex-lg gap-4'>
           <div>
             <label htmlFor="email" className='fw-semibold mb-2'>Email</label>
             <br/>
@@ -78,7 +78,7 @@ const RegisterForm = () => {
             <input ref={passwordInput} type="password" id="password" name="password" className='border border-primary rounded-4 focus-ring mb-3 py-1 px-3'/>
           </div>
         </div>
-        <div className='d-flex gap-4'>
+        <div className='d-flex-lg justify-content-center gap-4'>
           <div>
             <label htmlFor="picture" className='fw-semibold mb-2'>Picture</label>
             <br/>
@@ -95,7 +95,7 @@ const RegisterForm = () => {
             </select>
           </div>
         </div>
-        <p>Already have an account? <span></span>
+        <p className='px-4'>Already have an account? <span></span>
           <TextLink to='/sign-in' id='text-link' className='fw-bolder'>
             Sign in.
           </TextLink>

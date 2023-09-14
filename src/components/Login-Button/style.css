@@ -4,14 +4,10 @@
   color: white;
 }
 
-.login-span {
-  display: none;
-}
-
 /* Responsive Styles */
 
-@media (min-width: 440px) {
-  span {
-    display: inline;
-  }
+@media (max-width: 576px) {
+  #login-button {
+    transform: scale(.8);
+  }  
 }

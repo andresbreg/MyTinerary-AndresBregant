@@ -11,3 +11,11 @@
 .view-more-button, .close-dropdown-button {
   background: none;
 }
+
+/* Responsive Styles */
+
+@media (max-width: 400px) {
+  .itinerary, .itinerary-cover {
+    width: 84vw;
+  }
+}

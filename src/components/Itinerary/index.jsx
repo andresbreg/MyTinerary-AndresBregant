@@ -13,9 +13,9 @@ const Itinerary = ({name,photo,author,duration,price,likes,hashtags}) => {
 
   return (
     <>    
-      <div className='d-flex mt-4'>      
+      <div className='d-flex-lg mt-4'>      
         <img src={photo} alt={'Cover of ' + name} className='itinerary-cover'/>
-        <div className='itinerary d-flex flex-column justify-content-evenly'>
+        <div className='itinerary d-flex flex-column justify-content-evenly p-4'>
           <h4>{name}</h4>
           <div className='d-flex justify-content-center align-items-center gap-2'>
             <h6 className='my-0'>By</h6>

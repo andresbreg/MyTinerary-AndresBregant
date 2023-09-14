@@ -39,7 +39,7 @@ const LoginForm = () => {
 
   return (
     <>
-      <form onSubmit={handlerLogin} className='login-form rounded-4 py-5'>
+      <form onSubmit={handlerLogin} className='login-form rounded-4 my-4 py-4'>
         <h3 className='form-title mb-4'>Sign In</h3>
         <div>
           <label htmlFor="email" className='fw-semibold mb-2'>Email</label>
@@ -51,7 +51,7 @@ const LoginForm = () => {
           <br/>
           <input ref={passwordInput} type="password" id="password" name="password" className='border border-primary rounded-4 focus-ring mb-3 py-1 px-3'/>
         </div>
-        <p>Don't have an account? <span></span>
+        <p className='px-4'>Don't have an account? <span></span>
           <TextLink to='/sign-up' id='text-link' className='fw-bolder'>
             Create one.
           </TextLink>

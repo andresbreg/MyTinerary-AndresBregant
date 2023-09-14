@@ -16,3 +16,11 @@ footer .nav-link {
 footer .nav-link:hover {
   color: antiquewhite !important;
 }
+
+/* Responsive Styles */
+
+@media (max-width: 576px) {
+  nav {
+    transform: scale(.8);
+  }  
+}

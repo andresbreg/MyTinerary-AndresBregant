@@ -3,7 +3,7 @@ import './style.css'
 const City = ({name,country,photo,summary}) => {
 
   return (
-    <article className='mt-5 mb-4 mx-5'>
+    <article className='mt-5 mb-4 mx-3 mx-sm-5'>
       <div className='city d-flex flex-column align-items-center flex-lg-row'>        
         <h3 className='city-title d-lg-none'>{name + ', ' + country}</h3>
         <img src={photo} alt={name + ', ' + country} className='city-image order-lg-3 my-4'/>

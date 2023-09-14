@@ -4,3 +4,11 @@
   background-color: rgb(242, 192, 10);
   border-radius: 20px;
 }
+
+/* Responsive Styles */
+
+@media (max-width: 560px){
+  .warning {
+    width: 80vw;
+  }
+}
