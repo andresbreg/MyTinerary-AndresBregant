@@ -31,7 +31,6 @@ const LoginForm = () => {
     const password = dataUser.sub
     try {
       dispatch(userActions.sign_in({email,password}))
-      navigate('/')
     }
     catch (error) {
       console.log(error)

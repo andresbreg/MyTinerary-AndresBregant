@@ -1,7 +1,6 @@
 import { Link as TextLink } from 'react-router-dom'
 import { useRef } from 'react'
 import { useDispatch } from "react-redux"
-import { useNavigate } from 'react-router-dom'
 import { GoogleLogin } from '@react-oauth/google'
 import decode from "jwt-decode"
 import userActions from '../../store/actions/user'
@@ -11,7 +10,6 @@ import './style.css'
 const RegisterForm = () => {
 
   const dispatch = useDispatch()
-  const navigate = useNavigate()
   
   const nameInput = useRef()
   const lastNameInput = useRef()
@@ -30,7 +28,6 @@ const RegisterForm = () => {
     const country = countrySelect.current.value
     try {
       dispatch(userActions.register({name,lastName,email,password,picture,country}))
-      navigate('/')
     }
     catch (error) {
       console.log(error)
@@ -47,7 +44,6 @@ const RegisterForm = () => {
     const country = 'Other'
     try {
       dispatch(userActions.register({name,lastName,email,password,picture,country}))
-      navigate('/')
     }
     catch (error) {
       console.log(error)

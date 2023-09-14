@@ -11,18 +11,66 @@ const register = createAsyncThunk('register', async payload => {
         last_name: lastName,
         email: email,
         password: password,
-        picture: picture,
+        picture: picture || '',
         country: country
       })
-      .then(response => {
-        console.log('User successfully register')
+      .then(response => {        
+        // console.log('User successfully register')
+        const Toast = Swal.mixin({
+          toast: true,
+          position: 'top-end',
+          showConfirmButton: false,
+          showCloseButton: true,
+          timer: 4000,
+          didOpen: (toast) => {
+            toast.addEventListener('mouseenter', Swal.stopTimer)
+            toast.addEventListener('mouseleave', Swal.resumeTimer)
+          }
+        })        
+        Toast.fire({
+          icon: 'success',
+          title: 'User successfully register'
+        })
         return response.data.user
       })
-      .catch(error => console.log(error.response.data.messages))
+      .catch( error => {
+        error.response.data.messages.reverse().forEach(message => {
+          const Toast = Swal.mixin({
+            toast: true,
+            position: 'top-end',
+            showConfirmButton: false,
+            showCloseButton: true,
+            timer: 4000,
+            didOpen: (toast) => {
+              toast.addEventListener('mouseenter', Swal.stopTimer)
+              toast.addEventListener('mouseleave', Swal.resumeTimer)
+            }
+          })        
+          Toast.fire({
+            icon: 'warning',
+            title: message
+          })
+        })
+      })
     return {user: user}
   }
   catch (error) {
-    console.log(error.message)
+    console.log(error)
+    const Toast = Swal.mixin({
+      toast: true,
+      position: 'top-end',
+      showConfirmButton: false,
+      showCloseButton: true,
+      timer: 4000,
+      didOpen: (toast) => {
+        toast.addEventListener('mouseenter', Swal.stopTimer)
+        toast.addEventListener('mouseleave', Swal.resumeTimer)
+      }
+    })        
+    Toast.fire({
+      icon: 'error',
+      title: 'User already exists.'
+    })
   }
 })
 
@@ -31,10 +79,9 @@ const sign_in = createAsyncThunk('sign_in', async (payload, {rejectWithValue}) =
     let {email,password} = payload
     const response = await axios.post('http://localhost:3000/api/user/login', {
       email: email,
-      password: password,
+      password: password
     })
     if (response.data.user) {
-      // console.log('User successfully logged in')
       const Toast = Swal.mixin({
         toast: true,
         position: 'top-end',
@@ -53,11 +100,25 @@ const sign_in = createAsyncThunk('sign_in', async (payload, {rejectWithValue}) =
       localStorage.setItem('token', response.data.token)
       return response.data.user
     } else {
-      console.log('Login failed');
+      console.log('Login failed')
       return rejectWithValue({message: 'Login failed'})
     }
   } catch (error) {
-    console.log('Login error:', error)
+    const Toast = Swal.mixin({
+      toast: true,
+      position: 'top-end',
+      showConfirmButton: false,
+      showCloseButton: true,
+      timer: 4000,
+      didOpen: (toast) => {
+        toast.addEventListener('mouseenter', Swal.stopTimer)
+        toast.addEventListener('mouseleave', Swal.resumeTimer)
+      }
+    })        
+    Toast.fire({
+      icon: 'warning',
+      title: error.response.data.messages || 'The username or password does not exist'
+    })
     return rejectWithValue(error)
   }
 })

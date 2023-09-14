@@ -9,7 +9,7 @@ const initialState = {
 const userReducer = createReducer(initialState, builder => {
   return builder
     .addCase(userActions.register.fulfilled, (state,action) => {
-      return {...state, user: action.payload.user}
+      return {...state, user: action.payload}
     })
     .addCase(userActions.sign_in.fulfilled, (state, action) => {
       if (action.payload) return {user: action.payload, login: true}
